@@ -8,14 +8,14 @@ import { Sidebar } from '@/widgets/Sidebar';
 import { useTheme } from '@/shared/lib/hooks/useTheme/useTheme';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { ToggleFeatures } from '@/shared/lib/features';
-import { MainLayout } from '@/shared/layouts/MainLayout';
+import { MainLayout } from '@/shared/layouts/MainLayout;
 import { AppLoaderLayout } from '@/shared/layouts/AppLoaderLayout';
-import { PageLoader } from '@/widgets/PageLoader/index';
+import { PageLoader } from '@/widgets/PageLoader';
 import { useAppToolbar } from './lib/useAppToolbar';
 import { withTheme } from './providers/ThemeProvider/ui/withTheme';
 
 const App = memo(() => {
-    const { them } = useTheme();
+    const { theme } = useTheme();
     const dispatch = useAppDispatch();
     const inited = useSelector(getUserInited);
     const toolbar = useAppToolbar();
